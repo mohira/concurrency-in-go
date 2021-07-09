@@ -1,0 +1,6 @@
+docker run --rm -it centos:centos7 bash
+
+yum update -y
+yum install -y perf
+
+taskset -c 0 perf bench sched pipe -T
